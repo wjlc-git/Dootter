@@ -1,9 +1,9 @@
 # Dootter
 
-#Overview
+# Overview
 This Python script provides a lightweight, asynchronous DDoS protection service designed for Linux servers. It monitors incoming IP connections in real time, tracks the rate of connection attempts per IP address, and automatically blocks IPs that exceed configurable thresholds using iptables. After a cooldown period, blocked IPs are unblocked automatically. The script supports simulated traffic for testing purposes and can be adapted to monitor live network traffic using tcpdump. This tool is ideal for small to medium Linux servers needing simple rate-limit-based protection from network abuse, brute force, or simple DDoS attempts. It also serves as a practical example of using Python’s asyncio for network monitoring and automating firewall rules.
 
-#Features
+# Features
 - Asynchronous Monitoring: Utilizes Python’s asyncio to efficiently handle many IP connection events without blocking.
 - Configurable Rate Limits: Set the maximum allowed connections per IP within a time window.
 - Automatic Blocking/Unblocking: Adds and removes iptables rules to block abusive IPs temporarily.
@@ -19,7 +19,7 @@ This Python script provides a lightweight, asynchronous DDoS protection service 
 - Python 3.7 or higher (for asyncio subprocess support).
 - (Optional) tcpdump installed if monitoring live traffic.
 
-#Usage
+# Usage
 - RATE_LIMIT: Maximum number of connections per IP allowed in the time window.
 - INTERVAL: Time window in seconds for counting connections.
 - COOLDOWN: Duration in seconds to keep an IP blocked before unblocking.
